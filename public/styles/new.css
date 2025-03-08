@@ -1,0 +1,37 @@
+.color-picker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.color-picker input {
+  display: none; /* Hide the default radio buttons */
+}
+
+.color-picker label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Assign background colors */
+.color-picker label.red { background: #db2828; }
+.color-picker label.orange { background: #f2711c; }
+.color-picker label.yellow { background: #fbbd08; }
+.color-picker label.olive { background: #b5cc18; }
+.color-picker label.green { background: #21ba45; }
+.color-picker label.teal { background: #00b5ad; }
+.color-picker label.blue { background: #2185d0; }
+.color-picker label.violet { background: #6435c9; }
+.color-picker label.purple { background: #a333c8; }
+.color-picker label.pink { background: #e03997; }
+
+/* Highlight selected color */
+.color-picker input[type="radio"]:checked + label {
+  border: 3px solid black;
+  transform: scale(1.1);
+}

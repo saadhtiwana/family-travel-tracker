@@ -1,0 +1,146 @@
+/* Modern Travel Tracker Design System */
+:root {
+  --primary: #2A9D8F;
+  --secondary: #264653;
+  --accent: #E76F51;
+  --background: #F8F9FA;
+  --text: #2B2D42;
+  --border: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Tab Navigation */
+.tab-view {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+.tab-view input[type="submit"] {
+  display: none;
+}
+
+.tab-view label {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  background: rgba(42, 157, 143, 0.1);
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  font-weight: 500;
+}
+
+.tab-view label:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tab-view input:checked + label {
+  background: var(--primary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* Main Form */
+form[action="/add"] {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.2);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+button[type="submit"]:hover {
+  background: #22867a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 157, 143, 0.2);
+}
+
+/* Map Visualization */
+.ag-canvas {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.ag-canvas_svg path {
+  fill: #e9ecef;
+  stroke: #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.total-count {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+  
+  .tab-view {
+    flex-wrap: wrap;
+  }
+  
+  .tab-view label {
+    flex: 1;
+    text-align: center;
+  }
+}
