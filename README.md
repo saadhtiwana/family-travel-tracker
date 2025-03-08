@@ -6,6 +6,10 @@
 
 ## 📌 About the Project  
 **Family Travel Tracker** is a simple yet powerful Node.js and Express application that allows users to log the countries they have visited. It stores users and their visited destinations in a PostgreSQL database and provides an interactive interface to view and update travel records.  
+## Preview  
+![Family Travel Tracker Preview](p1.png)
+
+![Family Travel Tracker Preview](p2.png)
 
 ## ⚡ Features  
 ✅ Add and manage family members 🏠  
